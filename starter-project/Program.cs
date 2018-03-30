@@ -17,8 +17,10 @@ namespace starterproject
                 HeightInches = 6
             };
 
+
             var workers = GenerateWeWorkers();
 
+            workers.Add(WeWorker.ReadWorker());
             var json = JsonConvert.SerializeObject(workers);
 
             File.WriteAllText("workers.json", json);
