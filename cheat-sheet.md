@@ -4,7 +4,7 @@ python                 | c#                   | notes
 `print "hello world"`  | `Console.WriteLine("hello world");` 
 `import json`          | `using Newtonsoft.Json;`
 `myname = 'Tyson'`     | `string myName = "Tyson";` <br>-or-<br> `var myName = "Tyson";` (implicit type)
-<code>def do_thing(): <br>&nbsp;&nbsp;# do that thing</code> | <code>void doThing()<br> { <br>&nbsp;&nbsp;//do that thing<br>}</code> | "`void`" is the return type <br>for "returns nothing" <br>- if the function returned a <br>`string`, it would be <br><code>string doThing()</code>
+`def do_thing(): `<br>&nbsp;&nbsp;`# do that thing`| <code>void doThing()</code><br><code> { <br>&nbsp;&nbsp;//do that thing<br>}</code> | "`void`" is the return type <br>for "returns nothing" <br>- if the function returned a <br>`string`, it would be <br><code>string doThing()</code>
 `# this is a comment` | `// this is a single-line comment`
 <code>for i in range(0,10):<br>&nbsp;&nbsp;print i</code> | <code>for(int i=0; i<10; i++) <br>{<br>&nbsp;&nbsp;Console.WriteLine(i.ToString());<br>}</code>
 <code>for dog in dogs:<br>&nbsp;&nbsp;pet(dog)</code> | <code>foreach(Dog dog in dogs) {<br>&nbsp;&nbsp;Pet(dog)<br>}</code>
