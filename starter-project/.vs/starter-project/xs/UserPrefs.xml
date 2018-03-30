@@ -1,7 +1,8 @@
 ﻿<Properties StartupConfiguration="{F5112883-E189-420C-BFEE-8297379BFDF5}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="WeWorker.cs">
     <Files>
-      <File FileName="Program.cs" Line="11" Column="6" />
+      <File FileName="Program.cs" Line="10" Column="47" />
+      <File FileName="WeWorker.cs" Line="10" Column="9" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />

@@ -1,4 +1,5 @@
 ﻿using System;
+using Newtonsoft.Json;
 
 namespace starterproject
 {
@@ -6,7 +7,17 @@ namespace starterproject
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var andrew = new WeWorker()
+            {
+                Name = "Andrew",
+                Age = 29,
+                HeightFeet = 5,
+                HeightInches = 6
+            };
+
+
+            Console.WriteLine($"{andrew.Name} is {andrew.Age} years old");
+            Console.WriteLine($"{andrew.Name} is {andrew.HeightFormatted()} tall");
         }
     }
 }
