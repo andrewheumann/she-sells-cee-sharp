@@ -1,8 +1,0 @@
-/Users/andrewheumann/Documents/repos/she-sells-cee-sharp/starter-project/bin/Debug/starter-project.exe
-/Users/andrewheumann/Documents/repos/she-sells-cee-sharp/starter-project/bin/Debug/starter-project.pdb
-/Users/andrewheumann/Documents/repos/she-sells-cee-sharp/starter-project/bin/Debug/Newtonsoft.Json.dll
-/Users/andrewheumann/Documents/repos/she-sells-cee-sharp/starter-project/bin/Debug/Newtonsoft.Json.xml
-/Users/andrewheumann/Documents/repos/she-sells-cee-sharp/starter-project/obj/x86/Debug/starter-project.csprojResolveAssemblyReference.cache
-/Users/andrewheumann/Documents/repos/she-sells-cee-sharp/starter-project/obj/x86/Debug/starter-project.csproj.CoreCompileInputs.cache
-/Users/andrewheumann/Documents/repos/she-sells-cee-sharp/starter-project/obj/x86/Debug/starter-project.exe
-/Users/andrewheumann/Documents/repos/she-sells-cee-sharp/starter-project/obj/x86/Debug/starter-project.pdb
