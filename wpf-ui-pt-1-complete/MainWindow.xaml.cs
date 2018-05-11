@@ -13,29 +13,20 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Wpf_app
+namespace in_class_demo
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
-        private readonly ViewModel _context;
         public MainWindow()
         {
-            _context = new ViewModel()
+            DataContext = new ViewModel()
             {
-                Name = "Runtime",
-                Value = 10
+                Name = "Gui"
             };
-            DataContext = _context;
             InitializeComponent();
-            
-        }
-
-        private void AddEntryButtonClick(object sender, RoutedEventArgs e)
-        {
-          _context.AddEntry();
         }
     }
 }

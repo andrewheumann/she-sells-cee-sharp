@@ -5,17 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Wpf_app"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525" d:DataContext="{x:Static local:ViewModelSampleDataContext.Model}">
+        Title="MainWindow" Height="350" Width="525" d:DataContext="{x:Static local:SampleDataContext.Model}">
     <Grid Margin="10">
         <StackPanel>
             <DockPanel>
                 <Label>Name:</Label>
-                <TextBox Text="{Binding Name}"></TextBox>
+                <TextBox Text="{Binding Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></TextBox>
             </DockPanel>
-            <TextBlock FontSize="20" Text="{Binding Name, Mode=TwoWay, StringFormat=Hello\, \{0\}!, UpdateSourceTrigger=PropertyChanged}"></TextBlock>
+            <TextBlock FontSize="20" Text="{Binding Name, StringFormat=Hello\, \{0\}!}"></TextBlock>
             <Slider Minimum="0" Maximum="100" Value="{Binding Value}"></Slider>
             <TextBlock>The Value is:</TextBlock>
            <TextBlock Text="{Binding Value}"></TextBlock>
+            <Button Click="AddEntryButtonClick">Add Entry</Button>
+            <ListBox ItemsSource="{Binding Entries}">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Margin="4"  Text="{Binding Name}"></TextBlock>
+                            <TextBlock Margin="4"  Text="{Binding Value, StringFormat=\{0:0.0\}}"></TextBlock>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
         </StackPanel>
 
     </Grid>
