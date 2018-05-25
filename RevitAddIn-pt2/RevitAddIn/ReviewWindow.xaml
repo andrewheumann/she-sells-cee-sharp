@@ -1,0 +1,42 @@
+﻿<Window x:Class="WeWork.MyFirstAddin.ReviewWindow"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WeWork.MyFirstAddin"
+             mc:Ignorable="d" 
+             d:DesignHeight="300"
+            d:DataContext="{x:Static local:SampleViewModel.Model}" Width="829.203">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <DataGrid ItemsSource="{Binding Walls}" AutoGenerateColumns="False" SelectedItem="{Binding SelectedWall}" Grid.Column="0">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding ElementId}" ClipboardContentBinding="{x:Null}" Header="Element Id"/>
+                <DataGridTextColumn Binding="{Binding FamilyName}" ClipboardContentBinding="{x:Null}" Header="Family Name"/>
+                <DataGridTextColumn Binding="{Binding Function}" ClipboardContentBinding="{x:Null}" Header="Function"/>
+                <DataGridTextColumn Binding="{Binding Kind}" ClipboardContentBinding="{x:Null}" Header="Kind" Width="60"/>
+                <DataGridTextColumn Binding="{Binding WallType}" ClipboardContentBinding="{x:Null}" Header="Wall Type" Width="120"/>
+                <DataGridTextColumn Binding="{Binding Width}" ClipboardContentBinding="{x:Null}" Header="Width"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <DockPanel Grid.Column="1" Margin="5">
+            <TextBlock DockPanel.Dock="Top" FontSize="14" FontWeight="Bold">Parameters</TextBlock>
+            <ListBox ItemsSource="{Binding SelectedWall.Parameters}">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <DockPanel>
+                            <TextBlock Text="{Binding Key}" Margin="4" FontWeight="Bold"></TextBlock>
+                            <TextBlock Text="{Binding Value}" Margin="4"></TextBlock>
+                        </DockPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </DockPanel>
+      
+
+    </Grid>
+</Window>
